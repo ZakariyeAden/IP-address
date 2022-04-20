@@ -11,6 +11,8 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">   </script>
    <!-- Google fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,40 +26,40 @@
   <main>
     <section class="search-section ">
        <h1>IP Address Tracker</h1>
-       <div class="flex input-container">
-         <input type="search" placeholder="Search for any IP address or domain" class="ip-address" id="ip-address">
-         <button id="search-btn" class="btn">
-           <ion-icon name="chevron-forward-outline" class="icon ionicon"></ion-icon>
+         <form  class="flex input-container">
+            <input type="search" placeholder="Search for any IP address or domain" class="ip-address" id="input-btn ip-address">
+          <button id="search-btn" class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
           </button>
-        </div>
-        <p class="search-ip">- Search for any IP address or domain</p>
+        </form>
+      <p class="search-ip">- Search for any IP address or domain</p>
     </section>
-    <section class="output-map flex">
+    <section class="output-map ">
     <div class="data-container">
-      <div class="info">
+      <div id="info-section">
         <h2>IP Address</h2>
-        <p data-id="ip"></p>
+        <p id="ip"></p>
       </div>
-
+        <div class="v1"></div>
       <div class="info">
         <h2> Location</h2>
-        <p data-id="location"></p>
+        <p id="location"></p>
       </div>
-
+        <div class="v1"></div>
       <div class="info">
         <h2> Timezone</h2>
-        <p data-id="timezone"></p>
+        <p id="timezone"></p>
       </div>
-
+        <div class="v1"></div>
       <div class="info">
         <h2> ISP</h2>
-        <p data-id="isp"></p>
+        <p id="isp"></p>
       </div>
     </div>
     </section>
     <div id="map"></div>
   </main>
-
+<script src="app.js"></script>
   <!-- IonsIcon -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
